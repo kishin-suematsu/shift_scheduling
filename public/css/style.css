@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+span {
+  display: inline-block;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1, h3 {
+  margin-bottom: 20px;
+}
+
+/* shift DESIGN */
+.shift__container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebf4f5), to(#b5c6e0));
+  background: linear-gradient(#ebf4f5, #b5c6e0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+
+.times__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.corner {
+  background-color: #3d58ab;
+  width: 50px;
+  height: 70px;
+  margin: 2px;
+}
+
+.time_col {
+  background-color: #3579dc;
+  width: 60px;
+  border: solid 1px white;
+  color: #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2px;
+}
+
+.individual_shift {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.name {
+  width: 100px;
+  height: 70px;
+  color: white;
+  background-color: #3579dc;
+  color: #212529;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2px;
+}
+
+.time {
+  background-color: white;
+  height: 70px;
+  width: 28px;
+  margin: 2px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.time:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.time.work {
+  background-color: red;
+}
+
+.time.work:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset Button */
+.deleteBtn {
+  padding: 10px 25px;
+  margin-top: 20px;
+  border: none;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.deleteBtn:hover {
+  background-color: #eee;
+}
+
+/* Pop up */
+.btn__answer {
+  margin: 0 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pop-up-personal-info_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop-up-personal-info_container .pop-up-personal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00b4d8;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.pop-up-add-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop-up-add-container .pop-up-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00b4d8;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.add_user_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add_user_container .add_user_content {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00b4d8;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.add_user_container .add_user_content .user_infor_container {
+  width: 100%;
+}
+
+.add_user_container .add_user_content .user_infor_container input {
+  width: 90%;
+}
+
+monthShift .monthShift-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebf4f5), to(#b5c6e0));
+  background: linear-gradient(#ebf4f5, #b5c6e0);
+  width: 100%;
+  min-height: 100vh;
+}
+
+monthShift .monthShift-container .date-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+monthShift .monthShift-container .date-block .space {
+  width: 240px;
+}
+
+monthShift .monthShift-container .time-shift-block {
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+monthShift .monthShift-container .employee_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 240px;
+  height: 70px;
+  background-color: #3579dc;
+  border: 1px solid black;
+}
+
+monthShift .monthShift-container .date {
+  background-color: #3579dc;
+  width: 110px;
+  border: 1px solid black;
+}
+
+monthShift .monthShift-container .employee_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  width: 110px;
+  height: 70px;
+  background-color: #b5c6e0;
+}
+
+monthShift .monthShift-container .employee_time:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+popup-info .popup-info_container {
+  display: none;
+  background-color: white;
+  z-index: 99;
+  position: absolute;
+  top: 40%;
+  left: 41%;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+popup-info form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+popup-addUser .popup-addUser_container {
+  display: none;
+  background-color: white;
+  z-index: 99;
+  position: absolute;
+  top: 40%;
+  left: 41%;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+popup-addUser form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+profile-detail .profile-detail_container {
+  display: none;
+  background-color: white;
+  z-index: 99;
+  position: absolute;
+  top: 40%;
+  left: 41%;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+profile-detail form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

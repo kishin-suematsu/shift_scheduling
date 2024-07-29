@@ -1,0 +1,42 @@
+
+<popup-employee-info>
+    <div class="popup-employee-info_container">
+        <form action="/monthShift" method="post">
+            <div class="employee_info">
+                <ul>
+                    <input type="hidden" value="" name="data_name" class="hidden_name"> 
+                    <li class="employee"></li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <label for="role">職業 : </label>
+                    <select name="role" id="role">
+                    <% for (var key in employees.detail.title) { %>
+                            <% if (employees.detail.title.hasOwnProperty(key) && employees.detail.title[key] === true) { %>
+                                <option value="<%= key %>"><%= key %></option>
+                            <% } %>
+                    <% } %>
+                    </select>
+                </li>
+                <li>
+                    <label for="leaving">退勤 : </label>
+                    <select name = "end_time" id="leaving">
+                        <option value="休み">休み</option>
+                        <% for(var i=6; i<=21; i += 0.5){%>
+                             <% const hour = Math.floor(i)%>
+                             <% const min = (((i * 10) % 10) * 6) !== 0 ? (((i * 10) % 10) * 6) : "00" %>
+                             <% const timeValue = hour.toString().padStart(2, '0') + ':' + min.toString().padStart(2, '0') %>
+                             <option value="<%= timeValue%>"><%= hour%> : <%=min%></option>
+                        <%}%>
+                     </select>
+                </li>
+            </ul>
+            <div class="button-container">
+                <div class="btn btn-primary" onclick="handleClick()">キャンセル</div>
+                <button class="btn btn-primary" type="submit">変更する</button>
+            </div>
+        </form>
+    </div>
+</popup-employee-info>

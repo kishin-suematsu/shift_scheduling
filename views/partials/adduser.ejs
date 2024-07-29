@@ -1,0 +1,37 @@
+<popup-addUser>
+
+    <div class="popup-addUser_container">
+        <form action="/adduser" method="post">
+            <label for="addUser_name">名前：</label>
+            <input type="text" value="" name="user_name" id="addUser_name" placeholder="名前">
+            <label for="addUse_role1">役割1 : </label>
+            <select id="addUse_role1" name="user_role1">
+                <option value=""></option>
+                <option value="manager">管理者</option>
+                <option value="childcare_worker">保育士</option>
+                <option value="child_guidance_counselor">児童指導員</option>
+                <option value="nurse_supervisor">指導員</option>
+                <option value="physical_therapist">理学療法士</option>
+                <option value="doctor">医師</option>
+                <option value="others">その他</option>
+            </select>
+            <label for="addUse_role2">役割2 : </label>
+            <select id="addUse_role2" name="user_role2">
+                <option value=""></option>
+                <option value="manager">管理者</option>
+                <option value="childcare_worker">保育士</option>
+                <option value="child_guidance_counselor">児童指導員</option>
+                <option value="nurse_supervisor">指導員</option>
+                <option value="physical_therapist">理学療法士</option>
+                <option value="doctor">医師</option>
+                <option value="others">その他</option>
+            </select>
+            <div class="button-container">
+                <div class="btn btn-primary" onclick="handleCancel()">キャンセル</div>
+                <button class="btn btn-primary">更新</button>
+            </div>
+        </form>
+    </div>
+
+</popup-addUser>
+
